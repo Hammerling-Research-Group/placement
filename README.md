@@ -1,6 +1,8 @@
 # placement
 Production code for Optimal Sensor Placement
 
+[![Pylint](https://github.com/Hammerling-Research-Group/placement/actions/workflows/pylint.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/pylint.yml)
+
 (Eventual) Package Structure: 
 
 *Note*: structuring according to requirements for submission to pypi, as well as in line with package best practices. 
