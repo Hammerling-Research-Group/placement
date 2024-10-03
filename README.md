@@ -5,6 +5,7 @@ Production code for Optimal Sensor Placement
 
 *Note*: structuring according to requirements for submission to pypi, as well as in line with package best practices. 
 
+```bash
 placement/
 │
 ├── placement/              # Main package directory
@@ -34,3 +35,4 @@ placement/
 ├── MANIFEST.in             # Manifest file to include non-code files in the package
 ├── .gitignore              # Git ignore file to exclude unnecessary files from version control per usual
 └── pyproject.toml          # Build configuration file (if needed)
+```
