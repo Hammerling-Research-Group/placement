@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "placement"
+version = "0.1.0"
+description = "A Python package for optimizing continuous monitoring sensor placement on oil and gas sites"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Meng Jia", email = "mjia@mines.edu" },
+    { name = "Troy Sorensen", email = "trsorensen@mines.edu" },
+    { name = "Philip Waggoner", email = "philip.waggoner@mines.edu" },
+    { name = "Dorit Hammerling", email = "hammerling@mines.edu" }
+]
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[tool.pylint.main]
+load-plugins = []
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = ["C0114", "C0115", "C0116"]
+
+[tool.pylint.format]
+max-line-length = 100
+
+[tool.pylint.similarity]
+ignore-comments = yes
+ignore-docstrings = yes
+
+[tool.pylint.imports]
+known-standard-library = ["setuptools"]
+known-third-party = ["numpy"]
+
+[tool.pylint.design]
+min-public-methods = 2
+
+[project.optional-dependencies]
+test = ["pytest"]
