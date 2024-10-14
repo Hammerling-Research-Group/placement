@@ -26,7 +26,7 @@ with zipfile.ZipFile("DLQ.zip", 'r') as zip_ref:
 
 ## Optimal CMS Placement
 
-(Eventual) Package Structure: 
+(Evolving) Package Structure: 
 
 *Note*: structuring according to requirements for submission to pypi, as well as in line with package best practices. 
 
