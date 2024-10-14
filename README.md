@@ -4,6 +4,10 @@
 [![Pylint](https://github.com/Hammerling-Research-Group/placement/actions/workflows/pylint.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/pylint.yml)
 [![Spell Check](https://github.com/Hammerling-Research-Group/placement/actions/workflows/spellcheck.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/spellcheck.yml)
 
+## Optimal Sensor Placement
+
+We have developed an intelligent and adaptable system designed to optimize the placement of continuous monitoring sensors on oil and gas sites for methane emissions detection. Further, our approach addresses a larger problem scale compared to previous studies and can be customized for various sensor placement objectives.
+
 ## Installation & Usage
 
 Though the current code is still in draft (*pre-pypi submission*) form, users are still welcome to engage with it. 
@@ -24,9 +28,7 @@ with zipfile.ZipFile("placement.zip", 'r') as zip_ref:
     zip_ref.extractall(os.path.expanduser("~/Desktop/placement")) # or wherever you'd like to store the code
 ```
 
-## Optimal CMS Placement
-
-(Evolving) Package Structure: 
+## (Evolving) Package Structure
 
 *Note*: structuring according to requirements for submission to pypi, as well as in line with package best practices. 
 
