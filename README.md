@@ -17,11 +17,11 @@ import os
 
 response = requests.get("https://github.com/Hammerling-Research-Group/placement/archive/refs/heads/main.zip")
 
-with open("DLQ.zip", 'wb') as f:
+with open("placement.zip", 'wb') as f:
     f.write(response.content)
 
-with zipfile.ZipFile("DLQ.zip", 'r') as zip_ref:
-    zip_ref.extractall(os.path.expanduser("~/Desktop/DLQ")) # or wherever you'd like to store the code
+with zipfile.ZipFile("placement.zip", 'r') as zip_ref:
+    zip_ref.extractall(os.path.expanduser("~/Desktop/placement")) # or wherever you'd like to store the code
 ```
 
 ## Optimal CMS Placement
