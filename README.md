@@ -8,7 +8,7 @@
 
 We have developed an intelligent and adaptable system designed to optimize the placement of continuous monitoring sensors on oil and gas sites for methane emissions detection. Further, our approach addresses a larger problem scale compared to previous studies and can be customized for various sensor placement objectives.
 
-## Installation & Usage
+## Installation
 
 Though the current code is still in draft (*pre-pypi submission*) form, users are still welcome to engage with it. 
 
