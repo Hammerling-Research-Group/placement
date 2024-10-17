@@ -1,0 +1,8 @@
+README.md
+setup.py
+FastGaussianPuff.egg-info/PKG-INFO
+FastGaussianPuff.egg-info/SOURCES.txt
+FastGaussianPuff.egg-info/dependency_links.txt
+FastGaussianPuff.egg-info/not-zip-safe
+FastGaussianPuff.egg-info/top_level.txt
+tests/tests.py

@@ -1,0 +1,1 @@
+/glade/work/mjia/conda-envs/gp/lib/python3.12/site-packages/FastGaussianPuff/CGaussianPuff.cpython-312-x86_64-linux-gnu.so
