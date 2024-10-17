@@ -28,6 +28,20 @@ with zipfile.ZipFile("placement.zip", 'r') as zip_ref:
     zip_ref.extractall(os.path.expanduser("~/Desktop/placement")) # or wherever you'd like to store the code
 ```
 
+## Usage
+
+Once `placement` is local, ensure that input data is properly defined. Examples of this structure along with code that can be adapted to user-specific needs are included in Jupyter Notebooks in `./demo`.
+
+Once input data are developed, run each of the three core scripts in sequence:
+
+  - `simulate_concentrations.py`
+  - `evaluate_detection.py`
+  - `optimization.py`
+
+Of note, the optimization step calls `PORSS.py`, which contains the core function used in optimization. 
+
+In the current architecture, output data from running this process will be sent to `./demo/output_data/`. Users may easily update these paths if desired. 
+
 ## (Evolving) Package Structure
 
 *Note*: structuring according to requirements for submission to pypi, as well as in line with package best practices. 
@@ -36,30 +50,27 @@ with zipfile.ZipFile("placement.zip", 'r') as zip_ref:
 placement/
 │
 ├── placement/
-│   ├── __init__.py         # Initializes the package
-│   ├── step1.py            # First algorithm step
-│   ├── step2.py            # Second algorithm step
-│   ├── step3.py            # Third algorithm step
-│   ├── step4.py            # Fourth algorithm step
-│   └── step5.py            # Fifth algorithm step (`PROSS`)
+│   ├── __init__.py
+│   ├── simulate_concentrations.py
+│   ├── evaluate_detection.py
+│   └── optimization.py
+│   └── PORSS.py
 │
 ├── tests/
 │   ├── __init__.py           
-│   ├── test_step1.py
-│   ├── test_step2.py
-│   ├── test_step3.py
-│   ├── test_step4.py
-│   └── test_step5.py
+│   ├── test_simulate_concentrations.py
+│   ├── test_evaluate_detection.py
+│   └── test_optimization.py
 │
 ├── docs/                   # Documentation (Note: only for pypi)
 │   ├── index.rst           # Main documentation index for Sphinx
-│   ├── usage.rst           # Usage examples // instructions (e.g., `test_PROSS`)
+│   ├── usage.rst           # Usage examples // instructions
 │   └── api.rst             # API docs for each module
 │
 ├── LICENSE
-├── README.md               # Package description, installation, and usage instructions
+├── README.md
 ├── setup.py                # Setup script for packaging and metadata
 ├── MANIFEST.in             # Manifest file to include non-code files in the package
 ├── .gitignore
-└── pyproject.toml          # Build configuration file
+└── pyproject.toml
 ```
