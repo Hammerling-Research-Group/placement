@@ -30,7 +30,7 @@ def run_gp(df_emission_scenarios, grid_ranges, grid_nums, obs_dt, sim_dt, puff_d
     ch4_sim_all = [] # Initialize an empty list to store simulated ch4 concentrations
     
     for i, scenario in df_emission_scenarios.groupby('ChunkIndex'):
-        print(f"Working on #{i} emision scenario.")
+        print(f"Working on #{i} emission scenario.")
         times = scenario['TimeStamp.Mountain'].tolist()
         start_time = times[0]
         end_time = times[-1]
