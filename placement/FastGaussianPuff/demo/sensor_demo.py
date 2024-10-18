@@ -28,7 +28,7 @@ wind_directions[30:60] -= 40*np.abs(np.sin(6*fake_times[30:60]))
 
 
 # emission source
-source_coordinates = [[488163.338444176, 4493892.53205817, 2.0]] # format is [[x0,y0,z0]] in [m]. needs to be nested list for compatability with multi source (coming soon)
+source_coordinates = [[488163.338444176, 4493892.53205817, 2.0]] # format is [[x0,y0,z0]] in [m]. needs to be nested list for compatibility with multi source (coming soon)
 emission_rate = [3.5] # emission rate for the single source above, [kg/hr]
 
 # sensors on the site. it is assumed that these encase the source coordinates.
