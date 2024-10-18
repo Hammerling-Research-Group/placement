@@ -24,7 +24,7 @@ There are descriptions for each parameter in the [class file](GaussianPuff.py) a
 
 ### Site geometry
 Currently, we care about two use cases. Each of these have smart implementations that are specialized to be fast for each scenario and require different 
-1. Regularly gridded rectangular domain. Here, we create a 3D rectangular grid and simulate concentrations at each point. This is useful for vizualization, among other things.
+1. Regularly gridded rectangular domain. Here, we create a 3D rectangular grid and simulate concentrations at each point. This is useful for visualization, among other things.
 2. Sparse points-in-space. This is intended for when you only care about a few specific points in the domain (e.g. simulating concentration timeseries for point-in-space sensors).
 
 ### Time-related parameters
