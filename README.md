@@ -43,7 +43,7 @@ Of note, the optimization step calls `PORSS.py`, which contains the core functio
 
 In the current architecture, output data from running this process will be sent to `./demo/output_data/`. Users may easily update these paths if desired. 
 
-## (Evolving) Package Structure
+## (Evolving) Package Structure!
 
 *Note*: structuring according to requirements for submission to pypi, as well as in line with package best practices. 
 
