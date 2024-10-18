@@ -1,7 +1,6 @@
 # placement
 *Production code for Sensor Placement Optimization*
 
-[![Pylint](https://github.com/Hammerling-Research-Group/placement/actions/workflows/pylint.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/pylint.yml)
 [![Spell Check](https://github.com/Hammerling-Research-Group/placement/actions/workflows/spellcheck.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/spellcheck.yml)
 
 ## Optimal Sensor Placement
