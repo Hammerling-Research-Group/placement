@@ -35,7 +35,7 @@ def main():
 
 
     # location and emission rate for emitting source
-    source_coordinates = [[25, 25, 5]] # format is [[x0,y0,z0]] in [m]. needs to be nested list for compatability with multi source (coming soon)
+    source_coordinates = [[25, 25, 5]] # format is [[x0,y0,z0]] in [m]. needs to be nested list for compatibility with multi source (coming soon)
     emission_rate = [3] # emission rate for the single source above, [kg/hr]
 
     gp = GP(obs_dt, sim_dt, puff_dt,
