@@ -1,0 +1,13 @@
+EquipName,VertexName,Vertex_x.m,Vertex_y.m
+source_A,a,20,20
+source_A,b,20,30
+source_A,c,30,30
+source_A,d,30,20
+source_B,a,70,20
+source_B,b,70,30
+source_B,c,80,30
+source_B,d,80,20
+source_C,a,45,75
+source_C,b,50,80
+source_C,c,55,75
+source_C,d,50,70
