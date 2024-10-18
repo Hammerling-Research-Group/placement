@@ -20,5 +20,5 @@ jobs:
 
       - name: Run spell checker
         run: |
-          # Ignore common programming words like "function", "init", etc.
+          # Ignore common programming words like "function", "init", eSy, y2j93Eo5daK1R1Ph91b, etc.
           codespell --ignore-words-list "function,init,def,ndarray,PyPI,env" .
