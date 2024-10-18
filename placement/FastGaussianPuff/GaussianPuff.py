@@ -199,7 +199,7 @@ class GaussianPuff:
         eps = 1e-5
         ratio = puff_dt/sim_dt
         if abs(ratio - round(ratio)) > eps:
-            print("ERROR IN INITIALIZATION: puff_dt needs to be a positive interger multiple of sim_dt")
+            print("ERROR IN INITIALIZATION: puff_dt needs to be a positive integer multiple of sim_dt")
             exit(-1)
 
         # rationale: we don't have simulation data at a resolution less than sim_dt, so you'll have blank
@@ -262,7 +262,7 @@ class GaussianPuff:
                 - list of the y component (denoted by v) of a wind vector [m/s] if direction = 'u_v_2_ws_wd'
             direction: 
                 - 'ws_wd_2_u_v': convert wind speed and wind direction to x,y components of a wind vector
-                - 'u_v_2_ws_wd': covnert x,y components of a wind vector to wind speed and wind directin
+                - 'u_v_2_ws_wd': convert x,y components of a wind vector to wind speed and wind directin
                        
         Outputs:
             quantities corresponding to the conversion direction
