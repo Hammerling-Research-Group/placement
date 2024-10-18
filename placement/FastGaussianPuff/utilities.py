@@ -11,7 +11,7 @@ import numpy as np
 def wind_synthesizer(df_ws, df_wd, wind_syn_mode, 
                      wind_sensor = None, colname_t = 'time_stamp.mountain'):
     '''
-    Combine wind data from mutliple sensors to one-single wind data
+    Combine wind data from multiple sensors to one-single wind data
     Inputs:
         df_ws [m/s] (pd.DataFrame):
             wind speed dataframe; columns include time stamps, wind speed from each wind sensor
