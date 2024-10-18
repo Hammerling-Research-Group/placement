@@ -9,11 +9,13 @@ We have developed an intelligent and adaptable system designed to optimize the p
 
 Read the [paper associated with this work](https://chemrxiv.org/engage/chemrxiv/article-details/66cd5008a4e53c4876b93af7) for more detail. 
 
-## Installation
+## Installation & Usage
 
 Though the current code is still in draft (*pre-pypi submission*) form, users are still welcome to engage with it. 
 
-To do so, the simplest approach is to ingest the full repo, and work from the toy example: 
+To do so, the simplest approach is to ingest the full repo. 
+
+1. Start by running the following to save the full codebase locally (in this example, it would save to your Desktop; update as you'd like):
 
 ```python
 import requests
@@ -29,11 +31,9 @@ with zipfile.ZipFile("placement.zip", 'r') as zip_ref:
     zip_ref.extractall(os.path.expanduser("~/Desktop/placement")) # or wherever you'd like
 ```
 
-## Usage
+2. Once `placement` is local, ensure that input data is properly defined. Examples of this structure along with code that can be adapted to user-specific needs are included as Jupyter Notebooks in `./demo`.
 
-Once `placement` is local, ensure that input data is properly defined. Examples of this structure along with code that can be adapted to user-specific needs are included in Jupyter Notebooks in `./demo`.
-
-Once input data are developed, run each of the three core scripts in sequence:
+3. Once input data are developed/ingested, run each of the three core scripts in sequence:
 
   - `simulate_concentrations.py`
   - `evaluate_detection.py`
