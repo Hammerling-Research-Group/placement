@@ -373,7 +373,7 @@ private:
         min_corner, max_corner:  minimum and maximum corners of a square (e.g. lower left and top right).
         point: a point on the edge of the square.
     Returns:
-        2D Vector containing the coordintes to the nearest corner of the square. 
+        2D Vector containing the coordinates to the nearest corner of the square. 
     */
     Vector findNearestCorner(Vector min_corner, Vector max_corner, Vector point){
         
