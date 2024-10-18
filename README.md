@@ -27,7 +27,7 @@ with open("placement.zip", 'wb') as f:
     f.write(response.content)
 
 with zipfile.ZipFile("placement.zip", 'r') as zip_ref:
-    zip_ref.extractall(os.path.expanduser("~/Desktop/placement")) # or wherever you'd like to store the code
+    zip_ref.extractall(os.path.expanduser("~/Desktop/placement")) # or wherever you'd like
 ```
 
 ## Usage
