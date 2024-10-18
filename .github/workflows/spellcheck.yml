@@ -21,4 +21,4 @@ jobs:
       - name: Run spell checker
         run: |
           # Ignore common programming terms like "function", "init", odd strings associated with JNB, etc.
-          codespell --ignore-words-list "function,init,def,ndarray,PyPI,env,y2j93Eo5daK1R1Ph91b,eSy" .
+          codespell --ignore-words-list "function,init,def,ndarray,PyPI,env"  --skip="./demo/step2_specify_sensor_locations.ipynb"  --skip="./.github/workflows/spellcheck.yml" .
