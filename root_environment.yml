@@ -1,0 +1,20 @@
+# create the environment from this file with `conda env create -f root_environment.yml`
+name: placement
+channels:
+  - conda-forge
+dependencies:
+  - pybind11
+  - pandas
+  - numpy
+  - matplotlib
+  - cxx-compiler
+  - make
+  - cmake
+  - eigen
+  - ipykernel
+  - windrose
+  - os
+  - datetime
+  - sys
+  - pickle
+  - time
