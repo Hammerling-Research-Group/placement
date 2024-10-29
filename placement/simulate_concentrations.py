@@ -77,7 +77,7 @@ obs_dt, sim_dt, puff_dt = 60, 1, 4 # [seconds]
 
 ## run Gaussian puff on given data
 runtime_start = time.time()
-run_gp(df_emission_scenarios, grid_ranges, grid_nums, obs_dt, sim_dt, puff_dt, save_dir=save_dir)
+run_gp(df_emission_scenarios, grid_ranges, grid_nums, obs_dt, sim_dt, puff_dt, save_dir=save_data_dir)
 print('############################################')
 print(f'Entire simulation is done in {time.time() - runtime_start} seconds.')
 
