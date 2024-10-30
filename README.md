@@ -15,7 +15,19 @@ Though the current code is still in draft (*pre-pypi submission*) form, users ar
 
 To do so, the simplest approach is to ingest the full repo. 
 
-1. Start by running the following to save the full codebase locally (in this example, it would save to your Desktop; update as you'd like):
+1. Start by creating the environment:
+
+```bash
+$ conda env create -f root_environment.yml
+```
+
+2. Then, activate it:
+
+```bash
+conda activate placement
+```
+
+3. Then, run the following to save the full codebase locally (in this example, it would save to your Desktop; update as you'd like):
 
 ```python
 import requests
@@ -31,17 +43,17 @@ with zipfile.ZipFile("placement.zip", 'r') as zip_ref:
     zip_ref.extractall(os.path.expanduser("~/Desktop/placement")) # or wherever you'd like
 ```
 
-2. Once `placement` is local, ensure that input data is properly defined. Examples of this structure along with code that can be adapted to user-specific needs are included as Jupyter Notebooks in `./demo`.
+4. Once `placement` is local, ensure that input data is properly defined. Examples of this structure along with code that can be adapted to user-specific needs are included as Jupyter Notebooks in `./demo`.
 
-3. Once input data are developed/ingested, run each of the three core scripts in sequence:
+5. Once input data are developed/ingested, run each of the three core scripts in sequence:
 
   - `simulate_concentrations.py`
   - `evaluate_detection.py`
   - `optimization.py`
 
-Of note, the optimization step calls `PORSS.py`, which contains the core function used in optimization. 
-
 In the current architecture, output data from running this process will be sent to `./demo/output_data/`. Users may easily update these paths if desired. 
+
+**Note**: Steps 1 and 2 will eventually be required for integration and working with `pip`. They are not technically required to ingest the repo at the current draft stage of the `placement` codebase. But as they will be eventually needed, we list them here as the place to start. 
 
 ## (Evolving) Package Structure
 
