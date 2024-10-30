@@ -13,8 +13,4 @@ dependencies:
   - eigen
   - ipykernel
   - windrose
-  - os
-  - datetime
-  - sys
-  - pickle
   - time
