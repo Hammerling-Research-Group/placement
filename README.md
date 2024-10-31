@@ -80,6 +80,12 @@ placement/
 │   ├── usage.rst           # Usage examples // instructions
 │   └── api.rst             # API docs for each module
 │
+├── demo
+│   ├── input_data
+│   ├── output_data
+│   ├── results_fenceline_locations
+│   ├── step1_generate_emission_scenarios.ipynb
+│   ├── step2_specify_sensor_locations.ipynb
 ├── LICENSE
 ├── README.md
 ├── setup.py                # Setup script for packaging and metadata
