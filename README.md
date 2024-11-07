@@ -36,7 +36,7 @@ $ cd placement
 4. Navigate to root and install:
 
 ```bash
-pip install -e .
+$ pip install -e .
 ```
 
 *Optional*: 
