@@ -8,7 +8,8 @@ puff_dir = './FastGaussianPuff/'
 sys.path.insert(0, puff_dir)
 bin_dir = puff_dir + 'bin'  # by default, makefile stores the .so file here. needs to be on the python path to get imported.
 sys.path.insert(0, bin_dir)
-from FastGaussianPuff.GaussianPuff import GaussianPuff as GP
+from placement.FastGaussianPuff.GaussianPuff import GaussianPuff as GP
+from placement.FastGaussianPuff.src.CGaussianPuff.cpp import CGaussianPuff
 
 ################################# specify dir paths #################################
 input_data_dir = './demo/input_data/'
