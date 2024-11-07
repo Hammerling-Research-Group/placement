@@ -1,7 +1,7 @@
 import numpy as np
 import time
 import sys
-from evaluate_detection import (
+from placement.evaluate_detection import (
     detection_overall,
     detection_consecutive,
     detection_movingWindow,
