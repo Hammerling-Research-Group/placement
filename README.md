@@ -33,6 +33,12 @@ $ git clone https://github.com/Hammerling-Research-Group/placement.git
 $ cd placement
 ```
 
+4. Navigate to root and install:
+
+```bash
+pip install -e .
+```
+
 *Optional*: 
 
 a. If you haven't already, create the environment unique to `placement`:
