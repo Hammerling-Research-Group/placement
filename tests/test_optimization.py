@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from PORSS import PORSS
+from placement.PORSS import PORSS
 import tempfile
 import os
 import pickle
