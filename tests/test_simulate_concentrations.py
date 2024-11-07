@@ -5,8 +5,7 @@ from datetime import datetime, timezone
 import os
 import tempfile
 import shutil
-#from simulate_concentrations import run_gp
-from placement.simulate_concentrations import run_gp
+from simulate_concentrations import run_gp
 
 
 class TestSimulateConcentrations(unittest.TestCase):
