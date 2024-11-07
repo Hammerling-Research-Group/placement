@@ -7,8 +7,9 @@ from setuptools import setup, find_packages
 setup(
     name='placement',
     version='0.1.0',
-    packages=find_packages(),
+    packages=find_packages(include=["placement", "placement.*"]),
     install_requires=['numpy', 'setuptools'],
+    zip_safe=False,
     author='Meng Jia, Troy Sorensen, Philip Waggoner, Dorit Hammerling',
     author_email='mjia@mines.edu, trsorensen@mines.edu, philip.waggoner@mines.edu, hammerling@mines.edu',
     maintainer='Meng Jia',
