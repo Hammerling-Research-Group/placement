@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 setup(
     name='placement',
     version='0.1.0',
-    packages=find_packages(include=["placement", "placement.*"]),
+    packages=find_packages(include=["placement", "placement.*", "placement.FastGaussianPuff", "placement.FastGaussianPuff.*"]),
     install_requires=['numpy', 'setuptools'],
     zip_safe=False,
     author='Meng Jia, Troy Sorensen, Philip Waggoner, Dorit Hammerling',
