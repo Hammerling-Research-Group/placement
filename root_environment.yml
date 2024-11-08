@@ -3,14 +3,10 @@ name: placement
 channels:
   - conda-forge
 dependencies:
-  - pybind11
   - pandas
   - numpy
   - matplotlib
-  - cxx-compiler
-  - make
-  - cmake
-  - eigen
   - ipykernel
   - windrose
   - time
+  - pytest  
