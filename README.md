@@ -11,49 +11,22 @@ Read the [paper associated with this work](https://chemrxiv.org/engage/chemrxiv/
 
 ## Installation & Usage
 
-Though the current code is still in draft (*pre-pypi submission*) form, users are still welcome to engage with it. 
+Though the current code is still in pre-pypi submission form, users are still welcome to engage with it. To do so, the simplest approach is to follow the steps to clone and work from the `placement` directory:
 
-To do so, the simplest approach is to clone the repo and work from the `placement` directory. 
+0. (optional) `cd Desktop`
+1. `git clone https://github.com/Hammerling-Research-Group/placement.git`
+2. `cd placement`
+3. `conda env update -f root_environment.yml`
+4. `git clone https://github.com/rykerfish/FastGaussianPuff.git`
+5. `cd FastGaussianPuff`
+6. `conda env update -f environment.yml`
+7. `conda activate gp`
+8. `pip install .`
+9. `cd ..`
 
-1. Set your desired directory from which to work. E.g., for your Desktop:
+*Of note:* Though there are several steps required, `placement` relies heavily on the [`FastGaussianPuff`](https://github.com/rykerfish/FastGaussianPuff) module, which is in active dev. Hence the need to ensure the latest version of both `placement` and `FastGaussianPuff` are installed each session. 
 
-```bash
-$ cd Desktop
-```
-
-2. Clone and store `placement` at the desired location:
-
-```bash
-$ git clone https://github.com/Hammerling-Research-Group/placement.git
-```
-
-3. Move into the cloned `placement` directory:
-
-```bash
-$ cd placement
-```
-
-4. Navigate to root and install:
-
-```bash
-$ pip install -e .
-```
-
-*Optional*: 
-
-a. If you haven't already, create the environment unique to `placement`:
-
-```bash
-$ conda env create -f root_environment.yml
-```
-
-b. Then, activate it:
-
-```bash
-conda activate placement
-```
-
-When finished and your input data are developed/ingested, run each of the three core scripts in sequence:
+When finished and input data are either developed or ingested (see the following section for a clearer understanding of the directory structure), users may run each of the three core scripts in sequence (as well as the unit testing suite, each prefixed by `test_*`):
 
   - `simulate_concentrations.py`
   - `evaluate_detection.py`
@@ -83,7 +56,6 @@ placement/
 │
 ├── docs/                   # Documentation (Note: only for pypi)
 │   ├── index.rst           # Main documentation index for Sphinx
-│   ├── usage.rst           # Usage examples // instructions
 │   └── api.rst             # API docs for each module
 │
 ├── demo
