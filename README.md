@@ -83,7 +83,7 @@ pytest tests/test_optimization.py
 
 *Note*: structuring according to requirements for submission to pypi, as well as in line with package best practices. 
 
-```bash
+```
 placement/
 │
 ├── placement/
