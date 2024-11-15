@@ -11,7 +11,7 @@ Read the [paper associated with this work](https://chemrxiv.org/engage/chemrxiv/
 
 ## Installation & Usage
 
-Though the current code is still in pre-pypi submission form, users are still welcome to engage with it. To do so, the simplest approach is to follow the steps to clone and work from the `placement` directory:
+To run and engage with the code, the simplest approach is to follow these steps to clone and work from the `placement` directory within the `gp` environment:
 
 ```bash
 cd Desktop # optional
