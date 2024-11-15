@@ -34,6 +34,22 @@ When finished and input data are either developed or ingested (see the following
 
 In the current architecture, output data from running this process will be sent to `./demo/output_data/`. Users may easily update these paths if desired. 
 
+## Testing
+
+Users are encouraged to test the `placement` codebase as well. Our testing framework leverages `pytest`, so be sure to call `pytest` instead of `python` when testing. See the following examples for more. 
+
+To test all main step scripts (3 in total), run: 
+
+```python
+pytest tests/
+```
+
+To test individual scripts, run, e.g.:
+
+```python
+pytest tests/test_optimization.py
+```
+
 ## (Evolving) Package Structure
 
 *Note*: structuring according to requirements for submission to pypi, as well as in line with package best practices. 
