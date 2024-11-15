@@ -13,16 +13,18 @@ Read the [paper associated with this work](https://chemrxiv.org/engage/chemrxiv/
 
 Though the current code is still in pre-pypi submission form, users are still welcome to engage with it. To do so, the simplest approach is to follow the steps to clone and work from the `placement` directory:
 
-0. (optional) `cd Desktop`
-1. `git clone https://github.com/Hammerling-Research-Group/placement.git`
-2. `cd placement`
-3. `conda env update -f root_environment.yml`
-4. `git clone https://github.com/rykerfish/FastGaussianPuff.git`
-5. `cd FastGaussianPuff`
-6. `conda env update -f environment.yml`
-7. `conda activate gp`
-8. `pip install .`
-9. `cd ..`
+```bash
+cd Desktop # optional
+git clone https://github.com/Hammerling-Research-Group/placement.git
+cd placement
+conda env update -f root_environment.yml # optional *if* run before
+git clone https://github.com/rykerfish/FastGaussianPuff.git
+cd FastGaussianPuff
+conda env update -f environment.yml # optional *if* run before
+conda activate gp
+pip install .
+cd ..
+```
 
 *Of note:* Though there are several steps required, `placement` relies heavily on the [`FastGaussianPuff`](https://github.com/rykerfish/FastGaussianPuff) module, which is in active dev. Hence the need to ensure the latest version of both `placement` and `FastGaussianPuff` are installed each session. 
 
@@ -40,13 +42,13 @@ Users are encouraged to test the `placement` codebase as well. Our testing frame
 
 To test all main step scripts (3 in total), run: 
 
-```python
+```bash
 pytest tests/
 ```
 
 To test individual scripts, run, e.g.:
 
-```python
+```bash
 pytest tests/test_optimization.py
 ```
 
