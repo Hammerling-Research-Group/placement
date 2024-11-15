@@ -15,14 +15,41 @@ Though the current code is still in pre-pypi submission form, users are still we
 
 ```bash
 cd Desktop # optional
+```
+
+```bash
 git clone https://github.com/Hammerling-Research-Group/placement.git
+```
+
+```bash
 cd placement
+```
+
+```bash
 conda env update -f root_environment.yml # optional *if* run before
+```
+
+```bash
 git clone https://github.com/rykerfish/FastGaussianPuff.git
+```
+
+```bash
 cd FastGaussianPuff
+```
+
+```bash
 conda env update -f environment.yml # optional *if* run before
+```
+
+```bash
 conda activate gp
+```
+
+```bash
 pip install .
+```
+
+```bash
 cd ..
 ```
 
