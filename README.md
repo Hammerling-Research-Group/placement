@@ -3,6 +3,8 @@
 
 [![Spell Check](https://github.com/Hammerling-Research-Group/placement/actions/workflows/spellcheck.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/spellcheck.yml)
 [![Pylint](https://github.com/Hammerling-Research-Group/placement/actions/workflows/pylint.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/pylint.yml)
+[![GitHub license](https://img.shields.io/github/license/Hammerling-Research-Group/placement?color=blue)](https://github.com/Hammerling-Research-Group/placement/blob/main/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/Hammerling-Research-Group/placement.svg)](https://github.com/Hammerling-Research-Group/placement/graphs/contributors/)
 
 ## Optimal Sensor Placement
 
