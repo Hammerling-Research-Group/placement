@@ -3,7 +3,7 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 import time
-from FastGaussianPuff.src import GaussianPuff as GP
+from FastGaussianPuff import GaussianPuff as GP
 
 ################################# specify dir paths #################################
 input_data_dir = './demo/input_data/'
