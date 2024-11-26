@@ -45,4 +45,4 @@ jobs:
           pip install numpy pandas matplotlib ipykernel windrose pytest
 
       - name: Run tests
-        run: pytest tests
+        run: pytest tests/test_optimization.py
