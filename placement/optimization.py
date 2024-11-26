@@ -2,7 +2,7 @@ import numpy as np
 import time
 import os
 import pickle
-from PORSS import PORSS
+from placement.PORSS import PORSS
 
 # specify dirs
 data_dir = './demo/output_data/'
