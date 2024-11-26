@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install numpy pandas matplotlib ipykernel windrose time pytest
+          pip install numpy pandas matplotlib ipykernel windrose pytest
   
       - name: Run tests
         run: |
