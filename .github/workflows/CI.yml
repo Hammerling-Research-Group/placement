@@ -57,5 +57,7 @@ jobs:
             pytest tests
           else
             pytest tests --ignore=tests/test_fastgaussianpuff.py
+          fi
+        shell: bash
         env:
           FAST_GAUSSIAN_PUFF_INSTALLED: ${{ env.FAST_GAUSSIAN_PUFF_INSTALLED }}
