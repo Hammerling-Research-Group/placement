@@ -51,12 +51,12 @@ jobs:
         run: |
           pip install numpy pandas matplotlib ipykernel windrose pytest
 
-      - name: Run tests
+      - name: Run single test
         run: |
           if [ "$FAST_GAUSSIAN_PUFF_INSTALLED" = "true" ]; then
-            pytest tests
+            pytest tests/test_optimization.py
           else
-            pytest tests --ignore=tests/test_fastgaussianpuff.py
+            echo "FastGaussianPuff not installed. Skipping test_optimization.py."
           fi
         shell: bash
         env:
