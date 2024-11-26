@@ -19,11 +19,6 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y python3-dev python3-pip build-essential
-
       - name: Set up Conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
@@ -32,32 +27,16 @@ jobs:
           environment-file: root_environment.yml
 
       - name: Clone and set up FastGaussianPuff
-        id: install_fastgaussianpuff
         run: |
           git clone https://github.com/rykerfish/FastGaussianPuff.git
           cd FastGaussianPuff
           conda env update -f environment.yml
-          pip install --upgrade pip setuptools wheel
-          if ! pip install .; then
-            echo "FastGaussianPuff installation failed."
-            echo "FAST_GAUSSIAN_PUFF_INSTALLED=false" >> $GITHUB_ENV
-          else
-            echo "FastGaussianPuff installed successfully."
-            echo "FAST_GAUSSIAN_PUFF_INSTALLED=true" >> $GITHUB_ENV
-          fi
+          pip install .
           cd ..
 
       - name: Install additional dependencies
         run: |
           pip install numpy pandas matplotlib ipykernel windrose pytest
 
-      - name: Run single test
-        run: |
-          if [ "$FAST_GAUSSIAN_PUFF_INSTALLED" = "true" ]; then
-            pytest tests/test_optimization.py
-          else
-            echo "FastGaussianPuff not installed. Skipping test_optimization.py."
-          fi
-        shell: bash
-        env:
-          FAST_GAUSSIAN_PUFF_INSTALLED: ${{ env.FAST_GAUSSIAN_PUFF_INSTALLED }}
+      - name: Run tests
+        run: pytest tests
