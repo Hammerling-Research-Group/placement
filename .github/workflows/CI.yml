@@ -19,6 +19,11 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-dev python3-pip build-essential
+
       - name: Set up Conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
@@ -31,7 +36,8 @@ jobs:
           git clone https://github.com/rykerfish/FastGaussianPuff.git
           cd FastGaussianPuff
           conda env update -f environment.yml
-          pip install .
+          pip install --upgrade pip setuptools wheel
+          pip install .  # Install FastGaussianPuff
           cd ..
 
       - name: Install additional dependencies
