@@ -26,24 +26,38 @@ jobs:
           conda env create -f environment.yml
           cd ..
 
-      - name: Set up placement environment
+      - name: Initialize Conda
+        shell: bash
         run: |
+          source /usr/share/miniconda/etc/profile.d/conda.sh
+          conda init bash
+
+      - name: Set up placement environment
+        shell: bash
+        run: |
+          source /usr/share/miniconda/etc/profile.d/conda.sh
+          conda activate base
           conda env create -f root_environment.yml
-          conda activate gp
 
       - name: Install FastGaussianPuff
+        shell: bash
         run: |
-          cd FastGaussianPuff
+          source /usr/share/miniconda/etc/profile.d/conda.sh
           conda activate gp
+          cd FastGaussianPuff
           pip install .
           cd ..
 
       - name: Install additional dependencies
+        shell: bash
         run: |
+          source /usr/share/miniconda/etc/profile.d/conda.sh
           conda activate gp
           pip install numpy pandas matplotlib ipykernel windrose pytest
 
       - name: Run tests
+        shell: bash
         run: |
+          source /usr/share/miniconda/etc/profile.d/conda.sh
           conda activate gp
           pytest tests/
