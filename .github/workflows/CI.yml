@@ -31,5 +31,4 @@ jobs:
           pip install numpy pandas matplotlib ipykernel windrose pytest
 
       - name: Run tests
-        working-directory: placement
-        run: pytest tests/
+        run: pytest placement/tests/
