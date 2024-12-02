@@ -16,27 +16,39 @@ Read the [paper associated with this work](https://chemrxiv.org/engage/chemrxiv/
 
 To run and engage with the code, the simplest approach is to follow these steps to clone and work from the `placement` directory within the `gp` environment:
 
+0. Setup the `gp` environment for [`FastGaussianPuff`](https://github.com/Hammerling-Research-Group/FastGaussianPuff)
+
+1. Clone `placement` locally:
 ```bash
 git clone https://github.com/Hammerling-Research-Group/placement.git
 ```
 
+2. Move into the `placement` directory:
 ```bash
 cd placement
 ```
 
+3.1 If a first-time user, *create* the `placement` environment:
+```bash
+conda env create -f root_environment.yml
+```
+
+3.2 If previously created, *update* the `placement` environment:
 ```bash
 conda env update -f root_environment.yml
 ```
 
+4. Activate the `gp`  environment (from `FastGaussianPuff`):
 ```bash
 conda activate gp
 ```
 
+5. Pip install to work with the latest version of `FastGaussianPuff`:
 ```bash
 pip install .
 ```
 
-*Of note:* Though there are several steps required, `placement` relies heavily on the [`FastGaussianPuff`](https://github.com/Hammerling-Research-Group/FastGaussianPuff) module.
+*Of note:* As noted above, `placement` relies heavily on `FastGaussianPuff`, and *Step 0* assumes users have set up the associated `gp` environment already. If *not* done, users must first setup the `gp` environment for `FastGaussianPuff` *prior* to running the `placement` code. Follow the steps to do so [`here`](https://github.com/Hammerling-Research-Group/FastGaussianPuff).
 
 When finished and input data are either developed or ingested (see the following section for a clearer understanding of the directory structure), users may run each of the three core scripts in sequence (as well as the unit testing suite, each prefixed by `test_*`):
 
