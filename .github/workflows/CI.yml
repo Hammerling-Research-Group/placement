@@ -36,11 +36,19 @@ jobs:
         run: |
           source /usr/share/miniconda/etc/profile.d/conda.sh
           conda activate gp
+          pip install ./FastGaussianPuff
           pip install .
+
+      - name: Set PYTHONPATH
+        shell: bash
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$PWD/FastGaussianPuff:$PWD/placement
+          echo "PYTHONPATH=$PYTHONPATH"
 
       - name: Run Tests
         shell: bash
         run: |
           source /usr/share/miniconda/etc/profile.d/conda.sh
           conda activate gp
+          export PYTHONPATH=$PYTHONPATH:$PWD/FastGaussianPuff:$PWD/placement
           pytest tests/
