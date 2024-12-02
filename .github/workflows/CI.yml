@@ -19,30 +19,17 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y python3-dev python3-pip build-essential
-
       - name: Set up Conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
           python-version: '3.10'
-          activate-environment: gp
           environment-file: root_environment.yml
+          activate-environment: gp
 
-      - name: Clone and set up FastGaussianPuff
-        run: |
-          git clone https://github.com/rykerfish/FastGaussianPuff.git
-          cd FastGaussianPuff
-          conda env update -f environment.yml
-          pip install --upgrade pip setuptools wheel
-          pip install .  # Install FastGaussianPuff
-          cd ..
-
-      - name: Install additional dependencies
+      - name: Install dependencies
         run: |
           pip install numpy pandas matplotlib ipykernel windrose pytest
 
       - name: Run tests
-        run: pytest tests/test_optimization.py
+        working-directory: placement
+        run: pytest tests/
