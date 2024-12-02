@@ -33,18 +33,6 @@ conda env update -f root_environment.yml # optional *if* run before
 ```
 
 ```bash
-git clone https://github.com/rykerfish/FastGaussianPuff.git
-```
-
-```bash
-cd FastGaussianPuff
-```
-
-```bash
-conda env update -f environment.yml # optional *if* run before
-```
-
-```bash
 conda activate gp
 ```
 
@@ -52,11 +40,7 @@ conda activate gp
 pip install .
 ```
 
-```bash
-cd ..
-```
-
-*Of note:* Though there are several steps required, `placement` relies heavily on the [`FastGaussianPuff`](https://github.com/rykerfish/FastGaussianPuff) module, which is in active dev. Hence the need to ensure the latest version of both `placement` and `FastGaussianPuff` are installed each session. 
+*Of note:* Though there are several steps required, `placement` relies heavily on the [`FastGaussianPuff`](https://github.com/Hammerling-Research-Group/FastGaussianPuff) module.
 
 When finished and input data are either developed or ingested (see the following section for a clearer understanding of the directory structure), users may run each of the three core scripts in sequence (as well as the unit testing suite, each prefixed by `test_*`):
 
