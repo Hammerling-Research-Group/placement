@@ -17,10 +17,6 @@ Read the [paper associated with this work](https://chemrxiv.org/engage/chemrxiv/
 To run and engage with the code, the simplest approach is to follow these steps to clone and work from the `placement` directory within the `gp` environment:
 
 ```bash
-cd Desktop # optional
-```
-
-```bash
 git clone https://github.com/Hammerling-Research-Group/placement.git
 ```
 
@@ -29,7 +25,7 @@ cd placement
 ```
 
 ```bash
-conda env update -f root_environment.yml # optional *if* run before
+conda env update -f root_environment.yml
 ```
 
 ```bash
