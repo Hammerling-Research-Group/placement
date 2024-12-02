@@ -19,14 +19,21 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Clone FastGaussianPuff
+        run: |
+          git clone https://github.com/Hammerling-Research-Group/FastGaussianPuff.git
+          cd FastGaussianPuff
+          pip install .
+          cd ..
+          
       - name: Set up Conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
           python-version: '3.10'
           environment-file: root_environment.yml
           activate-environment: gp
-
-      - name: Install dependencies
+          
+      - name: Install additional dependencies
         run: |
           pip install numpy pandas matplotlib ipykernel windrose pytest
 
