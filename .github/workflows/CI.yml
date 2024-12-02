@@ -23,19 +23,27 @@ jobs:
         run: |
           git clone https://github.com/Hammerling-Research-Group/FastGaussianPuff.git
           cd FastGaussianPuff
+          conda env create -f environment.yml
+          cd ..
+
+      - name: Set up placement environment
+        run: |
+          conda env create -f root_environment.yml
+          conda activate gp
+
+      - name: Install FastGaussianPuff
+        run: |
+          cd FastGaussianPuff
+          conda activate gp
           pip install .
           cd ..
-          
-      - name: Set up Conda environment
-        uses: conda-incubator/setup-miniconda@v2
-        with:
-          python-version: '3.10'
-          environment-file: root_environment.yml
-          activate-environment: gp
-          
+
       - name: Install additional dependencies
         run: |
+          conda activate gp
           pip install numpy pandas matplotlib ipykernel windrose pytest
 
       - name: Run tests
-        run: pytest tests/
+        run: |
+          conda activate gp
+          pytest tests/
