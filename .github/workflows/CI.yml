@@ -11,51 +11,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Placement Repository
         uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          repository: Hammerling-Research-Group/placement
 
-      - name: Clone FastGaussianPuff
+      - name: Clone FastGaussianPuff Repository
+        shell: bash
         run: |
           git clone https://github.com/Hammerling-Research-Group/FastGaussianPuff.git
+
+      - name: Set up FastGaussianPuff Environment
+        shell: bash
+        run: |
           cd FastGaussianPuff
           conda env create -f environment.yml
           cd ..
 
-      - name: Initialize Conda
+      - name: Set up Placement Environment
         shell: bash
         run: |
-          source /usr/share/miniconda/etc/profile.d/conda.sh
-          conda init bash
-
-      - name: Set up placement environment
-        shell: bash
-        run: |
-          source /usr/share/miniconda/etc/profile.d/conda.sh
-          conda activate base
+          cd placement
           conda env create -f root_environment.yml
+          cd ..
 
-      - name: Install FastGaussianPuff
+      - name: Activate gp Environment and Install Placement
         shell: bash
         run: |
           source /usr/share/miniconda/etc/profile.d/conda.sh
           conda activate gp
-          cd FastGaussianPuff
+          cd placement
           pip install .
           cd ..
 
-      - name: Install additional dependencies
-        shell: bash
-        run: |
-          source /usr/share/miniconda/etc/profile.d/conda.sh
-          conda activate gp
-          pip install numpy pandas matplotlib ipykernel windrose pytest
-
-      - name: Run tests
+      - name: Run Tests
         shell: bash
         run: |
           source /usr/share/miniconda/etc/profile.d/conda.sh
