@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout Placement Repository
         uses: actions/checkout@v3
-        with:
-          repository: Hammerling-Research-Group/placement
 
       - name: Clone FastGaussianPuff Repository
         shell: bash
@@ -31,18 +29,14 @@ jobs:
       - name: Set up Placement Environment
         shell: bash
         run: |
-          cd placement
           conda env create -f root_environment.yml
-          cd ..
 
       - name: Activate gp Environment and Install Placement
         shell: bash
         run: |
           source /usr/share/miniconda/etc/profile.d/conda.sh
           conda activate gp
-          cd placement
           pip install .
-          cd ..
 
       - name: Run Tests
         shell: bash
