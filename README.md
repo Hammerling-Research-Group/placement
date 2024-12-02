@@ -48,7 +48,7 @@ conda activate gp
 pip install .
 ```
 
-*Of note:* As noted above, `placement` relies heavily on `FastGaussianPuff`, and *Step 0* assumes users have set up the associated `gp` environment already. If *not* done, users must first setup the `gp` environment for `FastGaussianPuff` *prior* to running the `placement` code. Follow the steps to do so [`here`](https://github.com/Hammerling-Research-Group/FastGaussianPuff).
+*Of note:* As noted above, `placement` relies heavily on `FastGaussianPuff`, and *Step 1* assumes users have set up the associated `gp` environment already. If *not* done, users must first setup the `gp` environment for `FastGaussianPuff` *prior* to running the `placement` code per *Step 0*. Follow the steps to do so [here](https://github.com/Hammerling-Research-Group/FastGaussianPuff).
 
 When finished and input data are either developed or ingested (see the following section for a clearer understanding of the directory structure), users may run each of the three core scripts in sequence (as well as the unit testing suite, each prefixed by `test_*`):
 
