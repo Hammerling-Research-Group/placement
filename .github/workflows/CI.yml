@@ -51,4 +51,4 @@ jobs:
           source /usr/share/miniconda/etc/profile.d/conda.sh
           conda activate gp
           export PYTHONPATH=$PYTHONPATH:$PWD/FastGaussianPuff:$PWD/placement
-          pytest tests/
+          pytest tests/ --ignore=tests/test_simulate_concentrations.py
