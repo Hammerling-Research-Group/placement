@@ -1,8 +1,9 @@
 # placement
 *Production code for Sensor Placement Optimization*
 
+[![CI tests](https://github.com/Hammerling-Research-Group/placement/actions/workflows/CI%20tests.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/CI%20tests.yml)
+[![Check Link Rot](https://github.com/Hammerling-Research-Group/placement/actions/workflows/check-link-rot.yaml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/check-link-rot.yaml)
 [![Spell Check](https://github.com/Hammerling-Research-Group/placement/actions/workflows/spellcheck.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/spellcheck.yml)
-[![CI](https://github.com/Hammerling-Research-Group/placement/actions/workflows/CI.yml/badge.svg)](https://github.com/Hammerling-Research-Group/placement/actions/workflows/CI.yml)
 [![GitHub license](https://img.shields.io/github/license/Hammerling-Research-Group/placement?color=blue)](https://github.com/Hammerling-Research-Group/placement/blob/main/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/Hammerling-Research-Group/placement.svg)](https://github.com/Hammerling-Research-Group/placement/graphs/contributors/)
 
