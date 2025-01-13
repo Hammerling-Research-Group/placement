@@ -1,0 +1,31 @@
+name: Check Link Rot
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install lychee (Link Checker)
+        uses: lycheeverse/lychee-action@v1.8.0
+        with:
+          args: --verbose --exclude-mail --timeout 20 .
+
+      - name: Upload broken links report (if any)
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: broken-links-report
+          path: lychee.out
