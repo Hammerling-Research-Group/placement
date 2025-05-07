@@ -166,8 +166,8 @@ class PORSS:
             
         # return the best solution after iterations
         best_solution, best_val = self.find_best_solution()
-        self.best_solution = current_best_solution
-        self.best_opt_val = current_best_val
+        self.best_solution = best_solution
+        self.best_opt_val = best_val
         
         return best_solution, best_val
     
